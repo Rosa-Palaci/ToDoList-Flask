@@ -8,6 +8,9 @@ todos = ['Comprar cafe', 'Enviar cafe', 'Envio a productor']
 def not_found(error):
     return render_template('404.html', error=error)
 
+@app.errorhandler(500)
+def internal_server_error(error):
+  return render_template('500.html', error=error)
 
 @app.route('/')
 def index():
