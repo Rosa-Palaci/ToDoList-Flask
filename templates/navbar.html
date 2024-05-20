@@ -1,7 +1,34 @@
-<nav>
+<!-- <nav>
     <ul>
         <img src="{{ url_for('static', filename='images/Logo.png')}}" alt="Logo">
         <li><a href="{{ url_for('index') }}">Inicio</a></li>
         <li><a href="https://ross-palaci-portafolio-rosa-front-cj940tytn-ross-palaci.vercel.app/">Ir a CV</a></li>
     </ul>
-</nav>
+</nav> -->
+
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button"
+                    class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="{{ url_for('hello') }}" class="navbar-brand">
+
+            </a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <img src="{{ url_for('static', filename='images/Logo.png')}}" alt="Logo">
+                <ul><a href="{{ url_for('hello') }}">Inicio</a></ul>
+                <ul><a href="https://ross-palaci-portafolio-rosa-front-cj940tytn-ross-palaci.vercel.app/" target="_blank">Mi CV</a></ul>
+            </ul>
+        </div>
+    </div>
+</div>
